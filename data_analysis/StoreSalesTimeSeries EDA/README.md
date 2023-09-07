@@ -4,4 +4,5 @@
 
  The SQL queries helped me understand more about the data and also to improve my querying skills.
 
- The model is located in my Machine learning Excerises directory.
+ The model is located in my Machine learning Excerises directory and the Data Set was obtained from Kaggle:
+ https://www.kaggle.com/competitions/store-sales-time-series-forecasting
