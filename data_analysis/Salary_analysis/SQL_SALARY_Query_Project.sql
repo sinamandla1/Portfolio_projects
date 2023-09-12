@@ -29,7 +29,17 @@ WHERE TRY_CAST(Age AS FLOAT) <= 35.0;
 SELECT
  SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total Males Working',
  SUM(CASE WHEN Gender = 'female' THEN 1 ELSE 0 END) AS 'Total Females Working'
+FROM Salary_Data_Based_country_and_r$;
+
+--4.
+---View table querying the structure to get the various Job Titles in the data set and the
+---number of people aged 35yrs and younger employed in each role, We then .
+CREATE VIEW [Youth in Job title] AS
+SELECT [Job Title],
+  COUNT(*) AS 'Number of employees 35 and younger'
 FROM Salary_Data_Based_country_and_r$
+WHERE TRY_CAST(Age AS FLOAT) <= 35.0
+GROUP BY [Job Title];
 ---------------------------------------------------------------------------------
 -----QUERIES-----
 --1.
