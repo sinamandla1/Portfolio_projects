@@ -1,7 +1,39 @@
 -- Complex salary data set
 
------SKILLS USED: CTE, MAX Function, CASES, Temp tables and Converting data types
+-----SKILLS USED: View Tables, MAX Function, Aggregates, CASES, Temp tables and Converting data types, Sub queries
 
+--------------View Tables--------------------
+--1.
+--View table querying the structure to get the various Job Titles in the data set and the
+--number of people employed in each role.
+CREATE VIEW [Job title count] AS
+SELECT [Job Title],
+  COUNT(*) AS 'Number of employees'
+FROM Salary_Data_Based_country_and_r$
+GROUP BY [Job Title];
+
+--2.
+--- View table querying the structure to see the gender is distributed in this data set. With this
+---we can assess the odds of getting employed as a specific gender aged 30yrs and younger,
+---or to assess current industry policies.
+
+SELECT
+ SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total males aged 30 and younger at work',
+ SUM(CASE WHEN Gender = 'female' THEN 1 ELSE 0 END) AS 'Total females aged 30 and younger at work'
+FROM Salary_Data_Based_country_and_r$
+WHERE TRY_CAST(Age AS FLOAT) <= 30.0;
+
+--3.
+---View table querying the structure to see the gender is distributed in this data set. With this
+---we can assess the odds of getting employed as a specific gender, or to assess current
+---industry or organisational policies.
+
+SELECT
+ SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total Males Working',
+ SUM(CASE WHEN Gender = 'female' THEN 1 ELSE 0 END) AS 'Total Females Working'
+FROM Salary_Data_Based_country_and_r$
+---------------------------------------------------------------------------------
+-----QUERIES-----
 --1.
 ---After importing the csv file to Excel and converting it into a table and cleaning
 ---Check if the query results correspond with the excel file table shape.
