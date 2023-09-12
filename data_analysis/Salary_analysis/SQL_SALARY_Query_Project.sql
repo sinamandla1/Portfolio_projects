@@ -5,7 +5,7 @@
 --------------View Tables--------------------
 --1.
 --View table querying the structure to get the various Job Titles in the data set and the
---number of people employed in each role.
+--number of people(regardless of age) employed in each role.
 CREATE VIEW [Job title count] AS
 SELECT [Job Title],
   COUNT(*) AS 'Number of employees'
@@ -14,19 +14,17 @@ GROUP BY [Job Title];
 
 --2.
 --- View table querying the structure to see the gender is distributed in this data set. With this
----we can assess the odds of getting employed as a specific gender aged 30yrs and younger,
----or to assess current industry policies.
-
+---we can determine averages of employed gender distribution focusing on ages 35yrs and younger.
+CREATE VIEW [Total Youth global workforce Males vs Females] AS
 SELECT
- SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total males aged 30 and younger at work',
- SUM(CASE WHEN Gender = 'female' THEN 1 ELSE 0 END) AS 'Total females aged 30 and younger at work'
+ SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total males aged 35 and younger at work',
+ SUM(CASE WHEN Gender = 'female' THEN 1 ELSE 0 END) AS 'Total females aged 35 and younger at work'
 FROM Salary_Data_Based_country_and_r$
-WHERE TRY_CAST(Age AS FLOAT) <= 30.0;
+WHERE TRY_CAST(Age AS FLOAT) <= 35.0;
 
 --3.
 ---View table querying the structure to see the gender is distributed in this data set. With this
----we can assess the odds of getting employed as a specific gender, or to assess current
----industry or organisational policies.
+---we can get industry averages of employement of males and females.
 
 SELECT
  SUM(CASE WHEN Gender = 'male' THEN 1 ELSE 0 END) AS 'Total Males Working',
