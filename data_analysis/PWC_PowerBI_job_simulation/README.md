@@ -5,7 +5,8 @@ Task 1: Self-Reflection
 it comes to developing insights. I don't like using Tableau and the opportunity to finally use PowerBi as an alternative is an 
 opportunity I desire as well."
 
-Task 2: Create a dashboard in Power BI for Claire that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset. Get creative! 
+Task 2: File names= "Customer Churn + Pwc analysis"
+Create a dashboard in Power BI for Claire that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset. Get creative! 
 
 Possible KPIs include (to get you started, but not limited to):
 
@@ -15,10 +16,12 @@ Calls by time
 Average speed of answer
 Agent’s performance quadrant -> average handle time (talk duration) vs calls answered
 
-Task 3: Your colleague, the engagement partner, asks you to do the following tasks:
+Task 3: File name= "Diversity and Inclusion".
+Your colleague, the engagement partner, asks you to do the following tasks:
 
 Define proper KPIs
 Create a dashboard for the retention manager reflecting the KPIs
 
-Task 4: Define relevant KPIs in hiring, promotion, performance and turnover, and create a visualisation
+Task 4: File name= "Diversity and Inclusion"
+Define relevant KPIs in hiring, promotion, performance and turnover, and create a visualisation
 Write what you think some root causes of their slow progress might be
