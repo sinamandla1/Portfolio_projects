@@ -5,3 +5,4 @@ The aim of the queries was to just specifically focus on the Software Engineer r
 to determine which country is focused on dominating the tech industry and also can help individuals thinking about changing careers.
 
 The Data is visualized on Tableau:
+https://public.tableau.com/views/SalaryofSoftwareengineeranalysis/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
