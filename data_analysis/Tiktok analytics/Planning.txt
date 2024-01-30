@@ -1,0 +1,11 @@
+Step 1 "Questions":
+What have the results been for posting videos between 14h00 - 14h30 CAT?
+Do memes work better than highlights of normal(dont produce, have no presence) DJ's?
+Did combining DJ's and memes work?
+Why are the memes working?
+Which hashtag combinations produced the results?
+
+Step 2 "Data collection"
+Step 3 "Cleaning data"
+Step 4 "Insights"
+Step 5 "Report"
